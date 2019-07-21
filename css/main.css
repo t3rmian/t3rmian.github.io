@@ -3,3 +3,40 @@ html {
   font-size: 1em;
   line-height: 1.4;
 }
+
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+header, mark {
+  text-align: center;
+}
+
+header > img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.col-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col h2 {
+  padding-top: 1rem;
+}
+
+footer {
+  text-align: center;
+}
+
+footer a[aria-disabled=true] {
+  pointer-events: none;
+  color: #999;
+}
+
+footer span:not(:first-child):before {
+  content: "\00B7";
+  padding: 0 .5em;
+}
