@@ -23,6 +23,42 @@ header > img {
   justify-content: space-between;
 }
 
+@media all and (max-width: 719px) {
+  .col-container {
+    flex-direction: column;
+  }
+}
+
+header, .col, footer {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right,
+   rgba(0, 0, 0, 0),
+   rgba(0, 0, 0, 0.75),
+   rgba(0, 0, 0, 0.95),
+   rgba(0, 0, 0, 0.75),
+   rgba(0, 0, 0, 0)
+  );
+}
+
+header hr {
+  max-width: 200px;
+  margin-top: 1rem;
+}
+
+.container > hr:first-of-type {
+  max-width: 400px;
+}
+
+.container > hr:last-of-type {
+  margin-bottom: 1rem;
+}
+
 .col h2 {
   padding-top: 1rem;
 }
