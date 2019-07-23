@@ -18,6 +18,20 @@ header > img {
   max-height: 150px;
 }
 
+.social a {
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+.social img {
+  width: 2rem;
+  height: 2rem;
+}
+
+footer {
+  padding-bottom: 1rem;
+}
+
 .col-container {
   display: flex;
   justify-content: space-between;
@@ -48,15 +62,16 @@ hr {
 
 header hr {
   max-width: 200px;
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+.container > hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .container > hr:first-of-type {
   max-width: 400px;
-}
-
-.container > hr:last-of-type {
-  margin-bottom: 1rem;
 }
 
 .col h2 {
