@@ -97,6 +97,7 @@ footer a[aria-disabled=true] {
 
 footer span:not(:first-child):before {
   content: "—";
+  color: #aaa;
   padding: 0 .5em;
 }
 
@@ -139,4 +140,54 @@ header h3:first-of-type {
 
 header h3:last-of-type {
   margin-top: .1rem;
+}
+
+a:hover {
+  color: #1974D2;
+}
+
+.social img:hover, a:hover, .link:hover:after, .link:hover:before {
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+}
+
+.link:hover:after, .link:hover:before {
+  opacity: 1;
+}
+
+.social img, a, .link:after, .link:before {
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+}
+
+.link:after, .link:before {
+  opacity: 0;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: -1;
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+.link:after {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -.7rem;
+  right: -.7rem;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top right, #1974D2, #fff, #fff);
+}
+
+.link:before {
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: -.7rem;
+  left: -.7rem;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  background-image: linear-gradient(white, white), radial-gradient(circle at bottom left, #1974D2, #fff, #fff);
 }
