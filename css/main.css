@@ -2,6 +2,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .container {
@@ -142,12 +143,25 @@ a h2 {
   display: inline;
 }
 
+header h1 {
+  font-size: 3rem;
+  text-transform:capitalize;
+  font-variant:small-caps;
+  font-weight:bold;
+}
+
+header h3, footer {
+  text-transform: uppercase;
+}
+
 header h3:first-of-type {
   margin-bottom: .1rem;
 }
 
 header h3:last-of-type {
   margin-top: .1rem;
+  font-size: .75rem;
+  margin-bottom: 2rem;
 }
 
 a:hover {
