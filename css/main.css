@@ -92,10 +92,6 @@ header hr {
   min-width: 220px;
 }
 
-.col:last-child {
-  min-width: 120px;
-}
-
 footer {
   text-align: center;
 }
