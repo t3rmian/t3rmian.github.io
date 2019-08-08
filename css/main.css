@@ -166,9 +166,7 @@ a:hover {
 }
 
 .social img:hover, a:hover, .link:hover:after, .link:hover:before {
-  -webkit-transition: all .25s ease-out;
-  -moz-transition: all .25s ease-out;
-  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
 }
 
 .link {
@@ -180,9 +178,7 @@ a:hover {
 }
 
 .social img, a, .link:after, .link:before {
-  -webkit-transition: all .25s ease-out;
-  -moz-transition: all .25s ease-out;
-  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
 }
 
 .link:after, .link:before {
