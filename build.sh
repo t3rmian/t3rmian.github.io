@@ -4,9 +4,10 @@ npm -v || read -p "Node not found. Do you want to auto install from https://inst
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    curl -s https://install-node.now.sh | bash -s --
+    curl -sL https://install-node.now.sh | bash -s --
 fi
 
+npm init -y
 npm install html-minifier
 npm install cssnano
 npm install cssnano-cli
@@ -18,5 +19,7 @@ html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --r
 cssnano css/main.css > dist/css/main.css
 cp img/* dist/img
 
-git subtree split --branch master --prefix dist/
-git push -f dist/ master
+export GIT_DEPLOY_DIR=dist
+export GIT_DEPLOY_BRANCH=master
+
+curl -sL https://github.com/X1011/git-directory-deploy/raw/master/deploy.sh | bash -s --
