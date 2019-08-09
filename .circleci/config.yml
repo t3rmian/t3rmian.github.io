@@ -2,18 +2,17 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:4.8.2
+      - image: circleci/node:lts
     steps:
-      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "34:42:99:b9:a5:2b:6f:4a:e9:ef:b7:22:61:03:17:cf"
       - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "build.sh" }}
+          name: allow-github
+          command: ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - run:
+          name: clone
+          command: git clone $CIRCLE_REPOSITORY_URL .
       - run:
           name: build
-          command: 'sudo ./build.sh'
-      - save_cache:
-          key: dependency-cache-{{ checksum "build.sh" }}
-          paths:
-            - ./node_modules
+          command: 'bash build.sh'

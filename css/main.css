@@ -162,7 +162,7 @@ header h3:last-of-type {
 }
 
 a:hover {
-  color: #1974D2;
+  text-shadow: 2px 2px 2px rgba(255, 182, 0, 0.8);
 }
 
 .social img:hover, a:hover, .link:hover:after, .link:hover:before {
