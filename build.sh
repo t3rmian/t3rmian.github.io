@@ -14,7 +14,7 @@ sudo npm install -g uglify-js
 rm -rf dist/ 
 mkdir dist dist/css dist/img
 
-html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --minify-css true --minify-js true --input-dir ./ --output-dir dist/ --file-ext html || exit 2
+html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --minify-css true --minify-js true --input-dir ./ --output-dir dist/ --file-ext html || exit 2
 cssnano css/main.css > dist/css/main.css || exit 3
 cp img/* dist/img
 
@@ -27,7 +27,7 @@ originalMD5=${git_directory_deploy_MD5:-ce930643d4b40f9afc54b91a890d9802}
 if [[ "$MD5" == "$originalMD5" ]]
 then
     sudo chmod +x deploy.sh
-    bash deploy.sh || exit 4
+    bash deploy.sh -m "publish `git rev-parse HEAD` [ci skip]" || exit 4
 else
     echo "Error: The MD5 hash for the deployment script did not match!"
     exit 1
