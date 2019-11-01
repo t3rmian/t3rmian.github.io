@@ -17,6 +17,8 @@ mkdir dist dist/css dist/img
 html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --minify-css true --minify-js true --input-dir ./ --output-dir dist/ --file-ext html || exit 2
 cssnano css/main.css > dist/css/main.css || exit 3
 cp img/* dist/img
+cp _redirects dist/
+cp CNAME dist/
 
 export GIT_DEPLOY_DIR=dist
 export GIT_DEPLOY_BRANCH=master
