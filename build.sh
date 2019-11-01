@@ -12,13 +12,14 @@ sudo npm install -g cssnano
 sudo npm install -g cssnano-cli
 sudo npm install -g uglify-js
 rm -rf dist/ 
-mkdir dist dist/css dist/img
+mkdir dist dist/css dist/img dist/.well-known
 
 html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --minify-css true --minify-js true --input-dir ./ --output-dir dist/ --file-ext html || exit 2
 cssnano css/main.css > dist/css/main.css || exit 3
 cp img/* dist/img
 cp _redirects dist/
 cp CNAME dist/
+cp brave-rewards-verification.txt dist/.well-known/
 
 export GIT_DEPLOY_DIR=dist
 export GIT_DEPLOY_BRANCH=master
