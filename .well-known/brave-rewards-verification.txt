@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: termian.dev
+Token: 6c1d2cfae8f31759ef6d75a31d1688460a34e62458a03d8f12ab5d2c922432d4
